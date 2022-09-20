@@ -14,7 +14,7 @@ body {
   background: url(bg-pattern-top.svg), url(bg-pattern-bottom.svg);
   background-repeat: no-repeat;
   background-size: 60vh, 75vh;
-  background-position: -60vw -60%, 50vw 270%;
+  background-position: -60vw -60%, 50vw 200%;
   background-color: hsl(185deg, 75%, 39%);
   background-attachment: fixed;
 }
