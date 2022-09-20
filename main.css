@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  padding: 0 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  background: url(bg-pattern-top.svg), url(bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: 60vh, 60vh;
+  background-position: -60vw -60%, 50vw 140%;
+  background-color: hsl(185deg, 75%, 39%);
+  background-attachment: fixed;
+}
+@media (min-width: 1200px) {
+  body {
+    background-size: 65%, 70%;
+    background-position: -50% -48vh, 150% 48vh;
+  }
+}
+
+main {
+  min-width: 20.4375em;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-cover {
+  display: flex;
+}
+.profile-cover img {
+  width: 100%;
+}
+
+.pfp-image {
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.pfp-image img {
+  border-radius: 50%;
+  border: 5px solid white;
+  box-sizing: content-box;
+}
+
+.profile {
+  padding-top: 4.5em;
+  text-align: center;
+  border-bottom: 1px solid hsla(0deg, 0%, 59%, 0.5);
+  background-color: white;
+}
+.profile h1 {
+  color: hsl(229deg, 23%, 23%);
+  font-size: 18px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.profile span {
+  color: hsl(227deg, 10%, 46%);
+  font-size: 18px;
+  margin-left: 0.5em;
+  font-weight: 400;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.profile p {
+  color: hsl(227deg, 10%, 46%);
+  font-size: 14px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  margin-bottom: 1.8em;
+}
+
+.profile-stats {
+  padding: 1.5em 2.5em;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: white;
+}
+.profile-stats h1 {
+  font-size: 18px;
+  font-family: "Kumbh Sans", sans-serif;
+  color: hsl(229deg, 23%, 23%);
+  margin-bottom: 0.2em;
+  letter-spacing: 0.05em;
+}
+.profile-stats p {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  font-family: "Kumbh Sans", sans-serif;
+  color: hsl(227deg, 10%, 46%);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  white-space: nowrap;
+  font-family: "Kumbh Sans", sans-serif;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(228deg, 45%, 44%);
+  text-decoration: none;
+}/*# sourceMappingURL=main.css.map */

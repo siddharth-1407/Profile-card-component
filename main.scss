@@ -1,0 +1,128 @@
+$mycolors: (
+    Dark-cyan: hsl(185, 75%, 39%),
+    Very-dark-desaturated-blue: hsl(229, 23%, 23%),
+    Dark-grayish-blue: hsl(227, 10%, 46%),
+    Dark-gray: hsla(0, 0%, 59%, 0.5)
+);
+@mixin desktop {
+    @media(min-width: 1200px){
+        @content;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    padding: 0 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    background: url(bg-pattern-top.svg), url(bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-size: 60vh, 60vh;
+    background-position: -60vw -60%, 50vw 140%;
+    // background-size: 150%, 150%;
+    // background-position: -50vh -290%, 25vh 350%;
+    background-color: map-get($mycolors, Dark-cyan);
+    background-attachment: fixed;
+
+    @include desktop{
+        background-size: 65%, 70%;
+        background-position: -50% -48vh, 150% 48vh;
+    }
+}
+main{
+    min-width: 20.4375em;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+.profile-cover{
+    display: flex;
+    img{
+        width: 100%;
+    }
+}
+.pfp-image{
+    position: absolute;
+    top: 21%;
+    left: 50%;
+    transform: translate(-50%);
+    img{
+        border-radius: 50%;
+        border: 5px solid white;
+        box-sizing: content-box;
+    }
+}
+.profile{
+    padding-top: 4.5em;
+    text-align: center;
+    border-bottom: 1px solid map-get($mycolors, Dark-gray);
+    background-color: white;
+    h1{
+        color: map-get($mycolors, Very-dark-desaturated-blue );
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        font-weight: 700;
+        margin-bottom: 0.5em;
+    }
+    span{
+        color: map-get($mycolors, Dark-grayish-blue );
+        font-size: 18px;
+        margin-left: 0.5em;
+        font-weight: 400;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    p{
+        color: map-get($mycolors, Dark-grayish-blue );
+        font-size: 14px;
+        font-family: 'Kumbh Sans', sans-serif;
+        font-weight: 400;
+        margin-bottom: 1.8em;
+    }
+}
+.profile-stats{
+    padding: 1.5em 2.5em;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: white;
+
+    h1{
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        color: map-get($mycolors, Very-dark-desaturated-blue );
+        margin-bottom: 0.2em;
+        letter-spacing: 0.05em;
+    }
+    p{
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        font-family: 'Kumbh Sans', sans-serif;
+        color: map-get($mycolors, Dark-grayish-blue );
+
+    }
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    white-space: nowrap;
+    font-family: 'Kumbh Sans', sans-serif;
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+  
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+        text-decoration: none;
+      }
+}
